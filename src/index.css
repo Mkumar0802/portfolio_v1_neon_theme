@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Neon Cyberpunk Portfolio Design System */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Fira+Code:wght@300;400;500&display=swap');
-
+/* Neon Cyberpunk Portfolio Design System */
 @layer base {
   :root {
     /* Cyberpunk Color Palette */
