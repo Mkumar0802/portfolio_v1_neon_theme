@@ -1,9 +1,9 @@
 const AboutSection = () => {
   const stats = [
-    { number: '4+', label: 'Years Experience', color: 'neon-blue' },
-    { number: '50+', label: 'Projects Completed', color: 'neon-pink' },
+    { number: '4+', label: 'Years Mern-stack Experience', color: 'neon-blue' },
+    { number: '6+', label: 'Overall Experience', color: 'neon-pink' },
     { number: '8+', label: 'Technologies', color: 'neon-green' },
-    { number: '100%', label: 'Client Satisfaction', color: 'neon-purple' }
+    { number: '100%', label: 'PASSIONATE FULL-STACK DEVELOPER', color: 'neon-purple' }
   ];
 
   const education = [
