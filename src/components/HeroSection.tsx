@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import Typewriter from "typewriter-effect";
 
+import Typewriter from "typewriter-effect";
+import { FaDownload } from "react-icons/fa";
 const HeroSection = () => {
 
 
@@ -60,12 +60,20 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in-up delay-700">
-          <button className="neon-button">
+          {/* View My Work (scrolls to WorkPage) */}
+          <button
+            className="neon-button"
+            onClick={() => {
+              const el = document.getElementById("work");
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
             VIEW MY WORK
           </button>
 
+          {/* Get in Touch (WhatsApp) */}
           <a
-            href="https://wa.me/919566420177" 
+            href="https://wa.me/919566420177"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 font-semibold border border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 neon-text-pink"
@@ -73,6 +81,24 @@ const HeroSection = () => {
             GET IN TOUCH
           </a>
         </div>
+
+                
+           {/* Download Resume button (below the CTA group) */}
+          <div className="mt-6 flex justify-center fade-in-up delay-900">
+            <a
+              href="https://drive.google.com/file/d/18jXNIXE3x18QsQ0JlIj_pBChuednWDOD/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-accent neon-text-green hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-lg font-semibold flex items-center gap-2"
+            >
+              <FaDownload size={18} />
+              Download Resume
+            </a>
+          </div>
+
+
+
+
 
         {/* Contact Info */}
         <div className="md:mt-16  mt-10 flex flex-wrap justify-center md:gap-8 gap-4 text-muted-foreground fade-in-up delay-700">

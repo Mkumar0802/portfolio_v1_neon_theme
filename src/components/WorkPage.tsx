@@ -142,7 +142,7 @@ const WorkPage = () => {
   }, [query, activeCat]);
 
   return (
-    <section className="min-h-screen py-24 px-6 relative">
+    <section id="work" className="min-h-screen py-24 px-6 relative">
       {/* Background Grid */}
       <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
 
@@ -154,7 +154,7 @@ const WorkPage = () => {
           </h1>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mt-4 rounded-full" />
           <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-            A curated selection of apps, integrations, and dashboards I’ve built.
+            A curated selection of apps I’ve built.
           </p>
         </div>
 

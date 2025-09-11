@@ -63,13 +63,13 @@ const quickLinks = [
     label: 'View Portfolio', 
     icon: <FaGlobe size={18} />, 
     color: 'secondary', 
-    action: 'https://yourportfolio.com'
+   action: '#work'   ,
   },
   { 
     label: 'Schedule Meeting', 
     icon: <FaCalendarAlt size={18} />, 
     color: 'accent', 
-    action: 'https://calendly.com/yourusername/meeting'
+    action: '#'
   }
 ];
 
@@ -115,28 +115,43 @@ const quickLinks = [
         </div>
 
         {/* Quick Actions */}
-        <div className="text-center mb-16">
-          <h3 className="text-2xl font-display font-bold neon-text-pink mb-8">
-            QUICK ACTIONS
-          </h3>
-             
-             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-  {quickLinks.map((link, index) => (
-    <a
-      key={link.label}
-      href={link.action}
-      target={link.action.startsWith('http') ? '_blank' : '_self'}
-      rel="noopener noreferrer"
-      download={link.label.includes('Resume')}
-      className={`flex items-center gap-2 px-6 py-3 border border-${link.color} text-${link.color} hover:bg-${link.color} hover:text-${link.color}-foreground transition-all duration-300 rounded-lg font-semibold fade-in-up delay-${(index + 1) * 200}`}
-    >
-      {link.icon}
-      {link.label}
-    </a>
-  ))}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+  {quickLinks.map((link, index) => {
+    const isScrollLink = link.action.startsWith("#");
+
+    if (isScrollLink) {
+      return (
+        <button
+          key={link.label}
+          onClick={() => {
+            const targetId = link.action.replace("#", "");
+            const el = document.getElementById(targetId);
+            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+          className={`flex items-center gap-2 px-6 py-3 border border-${link.color} text-${link.color} hover:bg-${link.color} hover:text-${link.color}-foreground transition-all duration-300 rounded-lg font-semibold fade-in-up delay-${(index + 1) * 200}`}
+        >
+          {link.icon}
+          {link.label}
+        </button>
+      );
+    }
+
+    return (
+      <a
+        key={link.label}
+        href={link.action}
+        target={link.action.startsWith("http") ? "_blank" : "_self"}
+        rel="noopener noreferrer"
+        download={link.label.includes("Resume")}
+        className={`flex items-center gap-2 px-6 py-3 border border-${link.color} text-${link.color} hover:bg-${link.color} hover:text-${link.color}-foreground transition-all duration-300 rounded-lg font-semibold fade-in-up delay-${(index + 1) * 200}`}
+      >
+        {link.icon}
+        {link.label}
+      </a>
+    );
+  })}
 </div>
 
-        </div>
 
         {/* Location & Availability */}
         <div className="bg-card border border-primary/20 rounded-lg p-8 max-w-3xl mx-auto text-center">
