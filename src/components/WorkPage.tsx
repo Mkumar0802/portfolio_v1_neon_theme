@@ -7,7 +7,7 @@ type Project = {
   title: string;
   blurb: string;
   image?: string;                 // optional thumbnail
-  category: "Web App" | "Dashboard" | "Landing Page" | "Integration" | "Chatbot" | "Other" | "LLM App";
+  category: "Web App" | "Dashboard" | "Landing Page" | "Integration" | "Chatbot" | "Other" | "LLM App" | "API Development";
   tech: string[];
   period?: string;
   role?: string;
@@ -85,6 +85,28 @@ const PROJECTS: Project[] = [
   ],
 }
 ,
+{
+  id: "node-sequelize-crud-api",
+  title: "Node.js + Sequelize CRUD API with MySQL",
+  blurb: "A RESTful API built using Node.js, Express, and Sequelize ORM for performing CRUD operations on a MySQL database. The API supports pagination, validation, and error handling, offering a robust back-end solution for web applications.",
+  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1759146135/node_sequlize.png",  // Image to represent the project
+  category: "API Development",
+  tech: ["Node.js", "Sequelize", "Express", "MySQL", "RESTful API"],
+  links: { 
+    // live: "http://localhost:4000", // or remove if no live version
+    repo: "https://github.com/Mkumar0802/node-seq-mysql",
+    caseStudy: "" // Add if applicable
+  },
+  highlights: [
+    "Built a fully functional RESTful API with CRUD operations (Create, Read, Update, Delete) using Sequelize ORM.",
+    "Implemented pagination and search filters for efficient data retrieval in large datasets.",
+    "Used Zod for input validation to ensure data integrity and provide detailed error messages.",
+    "Configured MySQL database with Sequelize migrations and models for smooth data handling.",
+    "Developed a clean and modular architecture for scalability and maintainability.",
+    "Implemented robust error handling with custom messages and HTTP status codes for better debugging."
+  ]
+}
+
   // {
   //   id: "sell-do-bridge",
   //   title: "Sell.do + Internal CRM Bridge",
