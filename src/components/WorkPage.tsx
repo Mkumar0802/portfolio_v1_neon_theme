@@ -7,7 +7,7 @@ type Project = {
   title: string;
   blurb: string;
   image?: string;                 // optional thumbnail
-  category: "Web App" | "Dashboard" | "Landing Page" | "Integration" | "Chatbot" | "Other" | "LLM App" | "API Development";
+  category: "Web App" | "Dashboard" | "Landing Page" | "Integration" | "Chatbot" | "Other" | "LLM App" | "API Development" | "Full-Stack Development";
   tech: string[];
   period?: string;
   role?: string;
@@ -105,7 +105,30 @@ const PROJECTS: Project[] = [
     "Developed a clean and modular architecture for scalability and maintainability.",
     "Implemented robust error handling with custom messages and HTTP status codes for better debugging."
   ]
+},
+{
+  "id": "task-management-app",
+  "title": "MERN Task Management Application",
+  "blurb": "A full-stack MERN (MongoDB, Express.js, React, Node.js) task management application with user authentication and real-time task operations. This application allows users to manage tasks with a responsive user interface, authentication, and secure task management features.",
+  "image": "https://res.cloudinary.com/dc6wggob7/image/upload/v1759242349/Screenshot_From_2025-09-30_19-54-32_o8v7im.png",  // Image to represent the project
+  "category": "Full-Stack Development",
+  "tech": ["MongoDB", "Express", "React", "Node.js", "JWT", "bcrypt", "Tailwind CSS", "Redux"],
+  "links": { 
+     "live": "https://vocal-banoffee-6ef5bb.netlify.app/", 
+    "repo": "https://github.com/Mkumar0802/React-Task-Management.git",
+    "caseStudy": "" // Add if applicable
+  },
+  "highlights": [
+    "User authentication with JWT-based login and password hashing using bcrypt.",
+    "Create, read, update, and delete tasks with user-specific isolation.",
+    "Real-time task management with task status toggling between Pending and Completed.",
+    "Responsive and modern UI designed with Tailwind CSS.",
+    "Protected routes for task management ensuring only authenticated users can access their tasks.",
+    "Full stack application that includes front-end and back-end with secure API routes."
+  ],
+  
 }
+
 
   // {
   //   id: "sell-do-bridge",
