@@ -7,12 +7,25 @@ export type VisitResponse = {
   uniqueTotal?: number;
   reason?: string;
 
-  
+
 };
+
+
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://node-seq-mysql.onrender.com';
+
+
+console.log('API_BASE is', API_BASE);
+
+
+
+
+
+
+
 
 export async function sendVisit(pagePath = window.location.pathname): Promise<VisitResponse | null> {
   try {
-    const resp = await fetch('https://node-seq-mysql.onrender.com/api/visit', {
+     const resp = await fetch(`${API_BASE}/api/visit`, {
       method: 'POST',
       credentials: 'include', // important so cookie will be sent/received
       headers: { 'Content-Type': 'application/json' },
