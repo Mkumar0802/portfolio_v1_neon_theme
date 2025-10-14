@@ -6,11 +6,13 @@ export type VisitResponse = {
   uniqueForPage?: number;
   uniqueTotal?: number;
   reason?: string;
+
+  
 };
 
 export async function sendVisit(pagePath = window.location.pathname): Promise<VisitResponse | null> {
   try {
-    const resp = await fetch('http://localhost:4000/api/visit', {
+    const resp = await fetch('https://node-seq-mysql.onrender.com/api/visit', {
       method: 'POST',
       credentials: 'include', // important so cookie will be sent/received
       headers: { 'Content-Type': 'application/json' },
