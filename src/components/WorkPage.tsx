@@ -127,41 +127,122 @@ const PROJECTS: Project[] = [
     "Full stack application that includes front-end and back-end with secure API routes."
   ],
   
+},
+{
+  id: "landmarklivings",
+  title: "LANDMARKLIVINGS",
+  blurb: "A fully responsive real estate landing page for Landmark Livings, showcasing properties and services. Built with PHP Mailer for contact form functionality, HTML, Tailwind CSS for styling, and responsive design optimized for mobile and tablet users.",
+  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150503/Screenshot_From_2025-11-03_11-44-03_aaedi6.png", 
+  category: "Landing Page",
+  tech: ["HTML", "PHP Mailer", "Tailwind CSS", "Responsive Design", "Mobile-First", "Tablet-Optimized"],
+  links: {
+    live: "https://landmarklivings.in/",
+    repo: "https://github.com/Mkumar0802/Real-State.git"
+  },
+  highlights: [
+    "Mobile-first and tablet-responsive layout for real estate clients",
+    "Contact form with PHP Mailer integration for lead generation",
+    "Property showcase with image sliders and detailed information",
+    "Tailwind CSS for a clean and modern design",
+    "SEO-friendly structure to increase visibility"
+  ]
+},
+
+{
+  id: "dementia-care",
+  title: "Dementia Care",
+  blurb: "A responsive landing page for dementia care services. Built using React.js with a simple, mobile-first design. Features include integration with NodeMailer for contact form submissions, WhatsApp API for quick customer communication, and Twilio for messaging services. Client feedback, service details, and a promotional banner are also integrated.",
+  category: "Landing Page",
+  tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized"],
+  links: {
+    live: "https://dementia-care.netlify.app/",
+    repo: "https://github.com/Mkumar0802/Dementia-Care"
+  },
+  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150573/Screenshot_From_2025-11-03_11-45-49_gsib7k.png",
+  highlights: [
+    "Mobile-first and tablet-responsive layout for optimal viewing across devices",
+    "Integrated NodeMailer for handling contact form submissions",
+    "WhatsApp API integration for instant communication with clients",
+    "Twilio messaging service integration for SMS-based customer interaction",
+    "Client feedback section for showcasing testimonials and reviews",
+    "Detailed list of services offered for dementia care",
+    "Promotional banner for upcoming events or promotions"
+  ]
+},
+
+{
+  id: "doctor-on-call",
+  title: "Doctor On Call",
+  blurb: "A fully responsive landing page for Doctor On Call services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer for form submissions, WhatsApp API for quick customer communication, and Twilio for SMS-based interactions. Features client feedback, detailed services, a promotional banner, and an added Google Campaign page for promotions.",
+  category: "Landing Page",
+  tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
+  links: {
+    live: "https://dynamic-seahorse-82fffb.netlify.app/",
+    repo: "https://github.com/Mkumar0802/Doctor-on-Call"
+  },
+  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762151027/Screenshot_From_2025-11-03_11-53-31_eqfft2.png",
+  highlights: [
+    "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
+    "Integrated NodeMailer to handle contact form submissions and lead generation",
+    "WhatsApp API integration for real-time communication with clients",
+    "Twilio messaging service for SMS notifications to users",
+    "Client feedback section to showcase testimonials and reviews",
+    "Detailed services section to highlight healthcare offerings",
+    "Promotional banner for announcing upcoming events, discounts, or new features",
+    "Integrated Google Campaign page for promoting special offers and driving traffic"
+  ]
+},
+
+{
+  id: "medical-equipment-consumables",
+  title: "Medical Equipment & Consumables",
+  blurb: "A fully responsive landing page for showcasing medical equipment and consumables services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer, WhatsApp API, and Twilio. It includes product descriptions, rental and purchase services, client feedback, promotional banner, and a Google Campaign page for promotions.",
+  category: "Landing Page",
+  tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
+  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150650/Screenshot_From_2025-11-03_11-46-46_cr4avk.png",
+  links: {
+    live: "https://medical-equipment-chennai-seo.netlify.app/",
+    repo: "https://github.com/Mkumar0802/Medical-Equioment-chennai-SEO"
+  },
+  highlights: [
+    "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
+    "Integrated NodeMailer to handle contact form submissions and lead generation",
+    "WhatsApp API integration for real-time communication with clients",
+    "Twilio messaging service for SMS notifications to users",
+    "Product descriptions for each medical equipment and consumable",
+    "Rental and purchase service options for medical equipment",
+    "Detailed services section for renting or purchasing equipment",
+    "Promotional banner for announcing upcoming events, discounts, or new products",
+    "Integrated Google Campaign page for promoting special offers and driving traffic"
+  ]
+},
+
+{
+  id: "ophthalmology-ui",
+  title: "Ophthalmology UI",
+  blurb: "A fully responsive landing page for Ophthalmology UI services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer, WhatsApp API, and Twilio. The site includes client feedback, detailed services, a promotional banner, and a Google Campaign page to help with promotions and advertisements.",
+  category: "Landing Page",
+  tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
+  links: {
+    live: "https://preeminent-heliotrope-396351.netlify.app/",
+    repo: "https://github.com/Mkumar0802/Ophthalmology-Ul-"
+  },
+  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150651/Screenshot_From_2025-11-03_11-47-00_b7ol1k.png",
+  highlights: [
+    "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
+    "Integrated NodeMailer to handle contact form submissions and lead generation",
+    "WhatsApp API integration for real-time communication with clients",
+    "Twilio messaging service for SMS notifications to users",
+    "Client feedback section to showcase testimonials and reviews",
+    "Detailed services section to highlight healthcare offerings",
+    "Promotional banner for announcing upcoming events, discounts, or new features",
+    "Integrated Google Campaign page for promoting special offers and driving traffic"
+  ]
 }
 
 
-  // {
-  //   id: "sell-do-bridge",
-  //   title: "Sell.do + Internal CRM Bridge",
-  //   blurb: "Two-way sync, dedupe logic, and lead stage automations.",
-  //   image: "/images/projects/sell-do-bridge.webp",
-  //   category: "Integration",
-  //   tech: ["Node.js", "REST", "MySQL", "BullMQ"],
-  //   period: "2023",
-  //   role: "Backend",
-  //   links: { live: "#", repo: "" },
-  //   highlights: [
-  //     "Idempotent sync workers",
-  //     "Conflict resolution + audit trail",
-  //     "Alerting & backoff retries",
-  //   ],
-  // },
-  // {
-  //   id: "react-landing",
-  //   title: "Marketing Landing Pages",
-  //   blurb: "High-converting, fast, responsive landing pages with A/B hooks.",
-  //   image: "/images/projects/landing-pages.webp",
-  //   category: "Landing Page",
-  //   tech: ["React", "Next.js", "TailwindCSS", "Vercel"],
-  //   period: "2022 – 2025",
-  //   role: "Frontend",
-  //   links: { live: "#", repo: "" },
-  //   highlights: [
-  //     "CLS-safe animations, lazy images",
-  //     "Form analytics + funnel events",
-  //     "SEO best practices",
-  //   ],
-  // },
+
+
 ];
 
 const CATEGORIES = ["All", ...Array.from(new Set(PROJECTS.map(p => p.category)))];
