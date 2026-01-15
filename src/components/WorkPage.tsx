@@ -20,225 +20,226 @@ type Project = {
 };
 
 const PROJECTS: Project[] = [
-{
-  id: "chat-ollama",
-  title: "Chat with Ollama - Local LLM Chat UI (Streamlit)",
-  blurb: "An interactive chat interface built with Streamlit that connects to Ollama models (like Mistral and DeepSeek) running locally. It supports real-time streaming responses, chat history management, and model selection, offering a lightweight yet powerful personal AI assistant experience.",
-   image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1757524449/chat_ollama_dphmhu.png",
-  category: "LLM App",
-  tech: ["Python", "LLM", "Ollama", "Streamlit"],
-  // period: "2024 – 2025",
-  // role: "Full-Stack Developer",
-  links: { 
-    // live: "#", 
-    repo: "https://github.com/Mkumar0802/GPT.git", 
-    // caseStudy: "" 
+  {
+    id: "chat-ollama",
+    title: "Chat with Ollama - Local LLM Chat UI (Streamlit)",
+    blurb: "An interactive chat interface built with Streamlit that connects to Ollama models (like Mistral and DeepSeek) running locally. It supports real-time streaming responses, chat history management, and model selection, offering a lightweight yet powerful personal AI assistant experience.",
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1757524449/chat_ollama_dphmhu.png",
+    category: "LLM App",
+    tech: ["Python", "LLM", "Ollama", "Streamlit"],
+    // period: "2024 – 2025",
+    // role: "Full-Stack Developer",
+    links: {
+      // live: "#", 
+      repo: "https://github.com/Mkumar0802/GPT.git",
+      // caseStudy: "" 
+    },
+    highlights: [
+      "Implemented real-time streaming responses using Ollama's API for a dynamic chat experience.",
+      "Designed a chat history system with session management, persistence, and export/download options.",
+      "Added model selection support (Mistral, DeepSeek, etc.) with dynamic switching.",
+      "Developed a clean and responsive UI in Streamlit for seamless user experience.",
+      // "Integrated CI/CD practices for maintaining and deploying the application efficiently."
+    ],
   },
-  highlights: [
-    "Implemented real-time streaming responses using Ollama's API for a dynamic chat experience.",
-    "Designed a chat history system with session management, persistence, and export/download options.",
-    "Added model selection support (Mistral, DeepSeek, etc.) with dynamic switching.",
-    "Developed a clean and responsive UI in Streamlit for seamless user experience.",
-    // "Integrated CI/CD practices for maintaining and deploying the application efficiently."
-  ],
-},
 
-{
-  id: "pdf-rag",
-  title: "PDF Q&A (RAG-ready) — Streamlit + OpenRouter",
-  blurb: "Ask questions about any PDF via a clean Streamlit UI. Extracts text with PyPDF and queries LLMs through OpenRouter, with docs and deployment guides included.",
-  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1757524444/pdf-rag_ojbkvs.png",
-  category: "LLM App",
-  tech: ["Python", "Streamlit", "OpenRouter"],
-  // period: "2025",
-  // role: "Full-stack",
-  links: { 
-    // live: "#", 
-    repo: "https://github.com/Mkumar0802/Pdf_Rag" 
+  {
+    id: "pdf-rag",
+    title: "PDF Q&A (RAG-ready) — Streamlit + OpenRouter",
+    blurb: "Ask questions about any PDF via a clean Streamlit UI. Extracts text with PyPDF and queries LLMs through OpenRouter, with docs and deployment guides included.",
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1757524444/pdf-rag_ojbkvs.png",
+    category: "LLM App",
+    tech: ["Python", "Streamlit", "OpenRouter"],
+    // period: "2025",
+    // role: "Full-stack",
+    links: {
+      // live: "#", 
+      repo: "https://github.com/Mkumar0802/Pdf_Rag"
+    },
+    highlights: [
+      "Upload ≤ 5MB PDFs; robust size checks & text extraction",
+      "Q&A powered by OpenRouter (default: gpt-3.5; easy swap to gpt-4o)",
+      "Session chat history + daily JSON logging",
+      "Secrets via .env; example + .gitignore to prevent leaks",
+      "Docs: README + /docs (Getting Started, Config, Troubleshooting, Deploy)",
+      "Ready for RAG: planned chunking/embeddings (FAISS/Chroma) and citations"
+    ],
   },
-  highlights: [
-    "Upload ≤ 5MB PDFs; robust size checks & text extraction",
-    "Q&A powered by OpenRouter (default: gpt-3.5; easy swap to gpt-4o)",
-    "Session chat history + daily JSON logging",
-    "Secrets via .env; example + .gitignore to prevent leaks",
-    "Docs: README + /docs (Getting Started, Config, Troubleshooting, Deploy)",
-    "Ready for RAG: planned chunking/embeddings (FAISS/Chroma) and citations"
-  ],
-},
-{
-  id: "smart-hr-automation",
-  title: "Smart HR Automation",
-  blurb: "Google Workspace integration for HR workflows: auto-parse resumes, sync with Sheets/Drive, and streamline candidate processing.",
-  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1757524448/smarthr_automation_lsql7s.png",
-  category: "Web App",
-  tech: ["Python", "Google API"],
-  // period: "2024–2025",
-  // role: "Backend & Integration",
-  links: {
-    //  live: "#", 
-    repo: "https://github.com/Mkumar0802/smart-hr-automation-python" },
-  highlights: [
-    "Automated Gmail → Drive → Sheets workflow",
-    "Resume parsing & candidate ranking with NLP/GPT",
-    // "Streamlit dashboard for upload, review, and sync",
-    "Secure secret handling via env + GCP Secret Manager",
-  ],
-}
-,
-{
-  id: "node-sequelize-crud-api",
-  title: "Node.js + Sequelize CRUD API with MySQL",
-  blurb: "A RESTful API built using Node.js, Express, and Sequelize ORM for performing CRUD operations on a MySQL database. The API supports pagination, validation, and error handling, offering a robust back-end solution for web applications.",
-  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1759146135/node_sequlize.png",  // Image to represent the project
-  category: "API Development",
-  tech: ["Node.js", "Sequelize", "Express", "MySQL", "RESTful API"],
-  links: { 
-    // live: "http://localhost:4000", // or remove if no live version
-    repo: "https://github.com/Mkumar0802/node-seq-mysql",
-    caseStudy: "" // Add if applicable
+  {
+    id: "smart-hr-automation",
+    title: "Smart HR Automation",
+    blurb: "Google Workspace integration for HR workflows: auto-parse resumes, sync with Sheets/Drive, and streamline candidate processing.",
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1757524448/smarthr_automation_lsql7s.png",
+    category: "Web App",
+    tech: ["Python", "Google API"],
+    // period: "2024–2025",
+    // role: "Backend & Integration",
+    links: {
+      //  live: "#", 
+      repo: "https://github.com/Mkumar0802/smart-hr-automation-python"
+    },
+    highlights: [
+      "Automated Gmail → Drive → Sheets workflow",
+      "Resume parsing & candidate ranking with NLP/GPT",
+      // "Streamlit dashboard for upload, review, and sync",
+      "Secure secret handling via env + GCP Secret Manager",
+    ],
+  }
+  ,
+  {
+    id: "node-sequelize-crud-api",
+    title: "Node.js + Sequelize CRUD API with MySQL",
+    blurb: "A RESTful API built using Node.js, Express, and Sequelize ORM for performing CRUD operations on a MySQL database. The API supports pagination, validation, and error handling, offering a robust back-end solution for web applications.",
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1759146135/node_sequlize.png",  // Image to represent the project
+    category: "API Development",
+    tech: ["Node.js", "Sequelize", "Express", "MySQL", "RESTful API"],
+    links: {
+      // live: "http://localhost:4000", // or remove if no live version
+      repo: "https://github.com/Mkumar0802/node-seq-mysql",
+      caseStudy: "" // Add if applicable
+    },
+    highlights: [
+      "Built a fully functional RESTful API with CRUD operations (Create, Read, Update, Delete) using Sequelize ORM.",
+      "Implemented pagination and search filters for efficient data retrieval in large datasets.",
+      "Used Zod for input validation to ensure data integrity and provide detailed error messages.",
+      "Configured MySQL database with Sequelize migrations and models for smooth data handling.",
+      "Developed a clean and modular architecture for scalability and maintainability.",
+      "Implemented robust error handling with custom messages and HTTP status codes for better debugging."
+    ]
   },
-  highlights: [
-    "Built a fully functional RESTful API with CRUD operations (Create, Read, Update, Delete) using Sequelize ORM.",
-    "Implemented pagination and search filters for efficient data retrieval in large datasets.",
-    "Used Zod for input validation to ensure data integrity and provide detailed error messages.",
-    "Configured MySQL database with Sequelize migrations and models for smooth data handling.",
-    "Developed a clean and modular architecture for scalability and maintainability.",
-    "Implemented robust error handling with custom messages and HTTP status codes for better debugging."
-  ]
-},
-{
-  "id": "task-management-app",
-  "title": "MERN Task Management Application",
-  "blurb": "A full-stack MERN (MongoDB, Express.js, React, Node.js) task management application with user authentication and real-time task operations. This application allows users to manage tasks with a responsive user interface, authentication, and secure task management features.",
-  "image": "https://res.cloudinary.com/dc6wggob7/image/upload/v1759242349/Screenshot_From_2025-09-30_19-54-32_o8v7im.png",  // Image to represent the project
-  "category": "Full-Stack Development",
-  "tech": ["MongoDB", "Express", "React", "Node.js", "JWT", "bcrypt", "Tailwind CSS", "Redux"],
-  "links": { 
-     "live": "https://vocal-banoffee-6ef5bb.netlify.app/", 
-    "repo": "https://github.com/Mkumar0802/React-Task-Management.git",
-    "caseStudy": "" // Add if applicable
-  },
-  "highlights": [
-    "User authentication with JWT-based login and password hashing using bcrypt.",
-    "Create, read, update, and delete tasks with user-specific isolation.",
-    "Real-time task management with task status toggling between Pending and Completed.",
-    "Responsive and modern UI designed with Tailwind CSS.",
-    "Protected routes for task management ensuring only authenticated users can access their tasks.",
-    "Full stack application that includes front-end and back-end with secure API routes."
-  ],
-  
-},
-{
-  id: "landmarklivings",
-  title: "LANDMARKLIVINGS",
-  blurb: "A fully responsive real estate landing page for Landmark Livings, showcasing properties and services. Built with PHP Mailer for contact form functionality, HTML, Tailwind CSS for styling, and responsive design optimized for mobile and tablet users.",
-  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150503/Screenshot_From_2025-11-03_11-44-03_aaedi6.png", 
-  category: "Landing Page",
-  tech: ["HTML", "PHP Mailer", "Tailwind CSS", "Responsive Design", "Mobile-First", "Tablet-Optimized"],
-  links: {
-    live: "https://landmarklivings.in/",
-    repo: "https://github.com/Mkumar0802/Real-State.git"
-  },
-  highlights: [
-    "Mobile-first and tablet-responsive layout for real estate clients",
-    "Contact form with PHP Mailer integration for lead generation",
-    "Property showcase with image sliders and detailed information",
-    "Tailwind CSS for a clean and modern design",
-    "SEO-friendly structure to increase visibility"
-  ]
-},
+  {
+    "id": "task-management-app",
+    "title": "MERN Task Management Application",
+    "blurb": "A full-stack MERN (MongoDB, Express.js, React, Node.js) task management application with user authentication and real-time task operations. This application allows users to manage tasks with a responsive user interface, authentication, and secure task management features.",
+    "image": "https://res.cloudinary.com/dc6wggob7/image/upload/v1759242349/Screenshot_From_2025-09-30_19-54-32_o8v7im.png",  // Image to represent the project
+    "category": "Full-Stack Development",
+    "tech": ["MongoDB", "Express", "React", "Node.js", "JWT", "bcrypt", "Tailwind CSS", "Redux"],
+    "links": {
+      "live": "https://vocal-banoffee-6ef5bb.netlify.app/",
+      "repo": "https://github.com/Mkumar0802/React-Task-Management.git",
+      "caseStudy": "" // Add if applicable
+    },
+    "highlights": [
+      "User authentication with JWT-based login and password hashing using bcrypt.",
+      "Create, read, update, and delete tasks with user-specific isolation.",
+      "Real-time task management with task status toggling between Pending and Completed.",
+      "Responsive and modern UI designed with Tailwind CSS.",
+      "Protected routes for task management ensuring only authenticated users can access their tasks.",
+      "Full stack application that includes front-end and back-end with secure API routes."
+    ],
 
-{
-  id: "dementia-care",
-  title: "Dementia Care",
-  blurb: "A responsive landing page for dementia care services. Built using React.js with a simple, mobile-first design. Features include integration with NodeMailer for contact form submissions, WhatsApp API for quick customer communication, and Twilio for messaging services. Client feedback, service details, and a promotional banner are also integrated.",
-  category: "Landing Page",
-  tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized"],
-  links: {
-    live: "https://dementia-care.netlify.app/",
-    repo: "https://github.com/Mkumar0802/Dementia-Care"
   },
-  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150573/Screenshot_From_2025-11-03_11-45-49_gsib7k.png",
-  highlights: [
-    "Mobile-first and tablet-responsive layout for optimal viewing across devices",
-    "Integrated NodeMailer for handling contact form submissions",
-    "WhatsApp API integration for instant communication with clients",
-    "Twilio messaging service integration for SMS-based customer interaction",
-    "Client feedback section for showcasing testimonials and reviews",
-    "Detailed list of services offered for dementia care",
-    "Promotional banner for upcoming events or promotions"
-  ]
-},
+  {
+    id: "landmarklivings",
+    title: "LANDMARKLIVINGS",
+    blurb: "A fully responsive real estate landing page for Landmark Livings, showcasing properties and services. Built with PHP Mailer for contact form functionality, HTML, Tailwind CSS for styling, and responsive design optimized for mobile and tablet users.",
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150503/Screenshot_From_2025-11-03_11-44-03_aaedi6.png",
+    category: "Landing Page",
+    tech: ["HTML", "PHP Mailer", "Tailwind CSS", "Responsive Design", "Mobile-First", "Tablet-Optimized"],
+    links: {
+      live: "https://landmarklivings.in/",
+      repo: "https://github.com/Mkumar0802/Real-State.git"
+    },
+    highlights: [
+      "Mobile-first and tablet-responsive layout for real estate clients",
+      "Contact form with PHP Mailer integration for lead generation",
+      "Property showcase with image sliders and detailed information",
+      "Tailwind CSS for a clean and modern design",
+      "SEO-friendly structure to increase visibility"
+    ]
+  },
 
-{
-  id: "doctor-on-call",
-  title: "Doctor On Call",
-  blurb: "A fully responsive landing page for Doctor On Call services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer for form submissions, WhatsApp API for quick customer communication, and Twilio for SMS-based interactions. Features client feedback, detailed services, a promotional banner, and an added Google Campaign page for promotions.",
-  category: "Landing Page",
-  tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
-  links: {
-    live: "https://dynamic-seahorse-82fffb.netlify.app/",
-    repo: "https://github.com/Mkumar0802/Doctor-on-Call"
+  {
+    id: "dementia-care",
+    title: "Dementia Care",
+    blurb: "A responsive landing page for dementia care services. Built using React.js with a simple, mobile-first design. Features include integration with NodeMailer for contact form submissions, WhatsApp API for quick customer communication, and Twilio for messaging services. Client feedback, service details, and a promotional banner are also integrated.",
+    category: "Landing Page",
+    tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized"],
+    links: {
+      live: "https://dementia-care.netlify.app/",
+      repo: "https://github.com/Mkumar0802/Dementia-Care"
+    },
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150573/Screenshot_From_2025-11-03_11-45-49_gsib7k.png",
+    highlights: [
+      "Mobile-first and tablet-responsive layout for optimal viewing across devices",
+      "Integrated NodeMailer for handling contact form submissions",
+      "WhatsApp API integration for instant communication with clients",
+      "Twilio messaging service integration for SMS-based customer interaction",
+      "Client feedback section for showcasing testimonials and reviews",
+      "Detailed list of services offered for dementia care",
+      "Promotional banner for upcoming events or promotions"
+    ]
   },
-  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762151027/Screenshot_From_2025-11-03_11-53-31_eqfft2.png",
-  highlights: [
-    "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
-    "Integrated NodeMailer to handle contact form submissions and lead generation",
-    "WhatsApp API integration for real-time communication with clients",
-    "Twilio messaging service for SMS notifications to users",
-    "Client feedback section to showcase testimonials and reviews",
-    "Detailed services section to highlight healthcare offerings",
-    "Promotional banner for announcing upcoming events, discounts, or new features",
-    "Integrated Google Campaign page for promoting special offers and driving traffic"
-  ]
-},
 
-{
-  id: "medical-equipment-consumables",
-  title: "Medical Equipment & Consumables",
-  blurb: "A fully responsive landing page for showcasing medical equipment and consumables services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer, WhatsApp API, and Twilio. It includes product descriptions, rental and purchase services, client feedback, promotional banner, and a Google Campaign page for promotions.",
-  category: "Landing Page",
-  tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
-  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150650/Screenshot_From_2025-11-03_11-46-46_cr4avk.png",
-  links: {
-    live: "https://medical-equipment-chennai-seo.netlify.app/",
-    repo: "https://github.com/Mkumar0802/Medical-Equioment-chennai-SEO"
+  {
+    id: "doctor-on-call",
+    title: "Doctor On Call",
+    blurb: "A fully responsive landing page for Doctor On Call services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer for form submissions, WhatsApp API for quick customer communication, and Twilio for SMS-based interactions. Features client feedback, detailed services, a promotional banner, and an added Google Campaign page for promotions.",
+    category: "Landing Page",
+    tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
+    links: {
+      live: "https://dynamic-seahorse-82fffb.netlify.app/",
+      repo: "https://github.com/Mkumar0802/Doctor-on-Call"
+    },
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762151027/Screenshot_From_2025-11-03_11-53-31_eqfft2.png",
+    highlights: [
+      "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
+      "Integrated NodeMailer to handle contact form submissions and lead generation",
+      "WhatsApp API integration for real-time communication with clients",
+      "Twilio messaging service for SMS notifications to users",
+      "Client feedback section to showcase testimonials and reviews",
+      "Detailed services section to highlight healthcare offerings",
+      "Promotional banner for announcing upcoming events, discounts, or new features",
+      "Integrated Google Campaign page for promoting special offers and driving traffic"
+    ]
   },
-  highlights: [
-    "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
-    "Integrated NodeMailer to handle contact form submissions and lead generation",
-    "WhatsApp API integration for real-time communication with clients",
-    "Twilio messaging service for SMS notifications to users",
-    "Product descriptions for each medical equipment and consumable",
-    "Rental and purchase service options for medical equipment",
-    "Detailed services section for renting or purchasing equipment",
-    "Promotional banner for announcing upcoming events, discounts, or new products",
-    "Integrated Google Campaign page for promoting special offers and driving traffic"
-  ]
-},
 
-{
-  id: "ophthalmology-ui",
-  title: "Ophthalmology UI",
-  blurb: "A fully responsive landing page for Ophthalmology UI services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer, WhatsApp API, and Twilio. The site includes client feedback, detailed services, a promotional banner, and a Google Campaign page to help with promotions and advertisements.",
-  category: "Landing Page",
-  tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
-  links: {
-    live: "https://preeminent-heliotrope-396351.netlify.app/",
-    repo: "https://github.com/Mkumar0802/Ophthalmology-Ul-"
+  {
+    id: "medical-equipment-consumables",
+    title: "Medical Equipment & Consumables",
+    blurb: "A fully responsive landing page for showcasing medical equipment and consumables services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer, WhatsApp API, and Twilio. It includes product descriptions, rental and purchase services, client feedback, promotional banner, and a Google Campaign page for promotions.",
+    category: "Landing Page",
+    tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150650/Screenshot_From_2025-11-03_11-46-46_cr4avk.png",
+    links: {
+      live: "https://medical-equipment-chennai-seo.netlify.app/",
+      repo: "https://github.com/Mkumar0802/Medical-Equioment-chennai-SEO"
+    },
+    highlights: [
+      "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
+      "Integrated NodeMailer to handle contact form submissions and lead generation",
+      "WhatsApp API integration for real-time communication with clients",
+      "Twilio messaging service for SMS notifications to users",
+      "Product descriptions for each medical equipment and consumable",
+      "Rental and purchase service options for medical equipment",
+      "Detailed services section for renting or purchasing equipment",
+      "Promotional banner for announcing upcoming events, discounts, or new products",
+      "Integrated Google Campaign page for promoting special offers and driving traffic"
+    ]
   },
-  image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150651/Screenshot_From_2025-11-03_11-47-00_b7ol1k.png",
-  highlights: [
-    "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
-    "Integrated NodeMailer to handle contact form submissions and lead generation",
-    "WhatsApp API integration for real-time communication with clients",
-    "Twilio messaging service for SMS notifications to users",
-    "Client feedback section to showcase testimonials and reviews",
-    "Detailed services section to highlight healthcare offerings",
-    "Promotional banner for announcing upcoming events, discounts, or new features",
-    "Integrated Google Campaign page for promoting special offers and driving traffic"
-  ]
-}
+
+  {
+    id: "ophthalmology-ui",
+    title: "Ophthalmology UI",
+    blurb: "A fully responsive landing page for Ophthalmology UI services. Built with React.js and optimized for mobile-first design, this page integrates NodeMailer, WhatsApp API, and Twilio. The site includes client feedback, detailed services, a promotional banner, and a Google Campaign page to help with promotions and advertisements.",
+    category: "Landing Page",
+    tech: ["React.js", "NodeMailer", "WhatsApp API", "Twilio", "Tailwind CSS", "Mobile-First", "Tablet-Optimized", "Google Campaign"],
+    links: {
+      live: "https://preeminent-heliotrope-396351.netlify.app/",
+      repo: "https://github.com/Mkumar0802/Ophthalmology-Ul-"
+    },
+    image: "https://res.cloudinary.com/dc6wggob7/image/upload/v1762150651/Screenshot_From_2025-11-03_11-47-00_b7ol1k.png",
+    highlights: [
+      "Mobile-first and tablet-responsive layout for optimal viewing across all devices",
+      "Integrated NodeMailer to handle contact form submissions and lead generation",
+      "WhatsApp API integration for real-time communication with clients",
+      "Twilio messaging service for SMS notifications to users",
+      "Client feedback section to showcase testimonials and reviews",
+      "Detailed services section to highlight healthcare offerings",
+      "Promotional banner for announcing upcoming events, discounts, or new features",
+      "Integrated Google Campaign page for promoting special offers and driving traffic"
+    ]
+  }
 
 
 
@@ -275,9 +276,9 @@ const WorkPage = () => {
       <div className="container mx-auto relative">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-display font-black neon-text-blue glitch" data-text="VIEW MY WORK">
+          <h2 className="text-4xl md:text-6xl font-display font-black neon-text-blue glitch" data-text="VIEW MY WORK">
             VIEW MY WORK
-          </h1>
+          </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mt-4 rounded-full" />
           <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
             A curated selection of apps I’ve built.
