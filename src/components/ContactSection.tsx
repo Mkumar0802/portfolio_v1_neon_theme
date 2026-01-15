@@ -1,4 +1,4 @@
-import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaLinkedin, FaGithub,FaDownload, FaGlobe, FaCalendarAlt} from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaLinkedin, FaGithub, FaDownload, FaGlobe, FaCalendarAlt } from "react-icons/fa";
 
 
 
@@ -52,26 +52,26 @@ const ContactSection = () => {
     'neon-yellow': 'text-neon-yellow hover:border-neon-yellow/60'
   };
 
-const quickLinks = [
-  { 
-    label: 'Download Resume', 
-    icon: <FaDownload size={18} />, 
-    color: 'primary', 
-    action: 'https://drive.google.com/file/d/18jXNIXE3x18QsQ0JlIj_pBChuednWDOD/view?usp=sharing' // place PDF inside /public
-  },
-  { 
-    label: 'View Portfolio', 
-    icon: <FaGlobe size={18} />, 
-    color: 'secondary', 
-   action: '#work'   ,
-  },
-  { 
-    label: 'Schedule Meeting', 
-    icon: <FaCalendarAlt size={18} />, 
-    color: 'accent', 
-    action: '#'
-  }
-];
+  const quickLinks = [
+    {
+      label: 'Download Resume',
+      icon: <FaDownload size={18} />,
+      color: 'primary',
+      action: 'https://drive.google.com/file/d/18jXNIXE3x18QsQ0JlIj_pBChuednWDOD/view?usp=sharing' // place PDF inside /public
+    },
+    {
+      label: 'View Portfolio',
+      icon: <FaGlobe size={18} />,
+      color: 'secondary',
+      action: '#work',
+    },
+    {
+      label: 'Schedule Meeting',
+      icon: <FaCalendarAlt size={18} />,
+      color: 'accent',
+      action: '#'
+    }
+  ];
 
   return (
     <section className="py-20 px-6 relative">
@@ -94,6 +94,7 @@ const quickLinks = [
               href={contact.action}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Contact me via ${contact.label}`}
               className={`relative block bg-card border border-primary/20 rounded-lg p-6 text-center transition-all duration-300 group fade-in-up delay-${(index + 1) * 100} ${contactColors[contact.color]}`}
             >
               <div className="flex justify-center items-center text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -116,41 +117,43 @@ const quickLinks = [
 
         {/* Quick Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-  {quickLinks.map((link, index) => {
-    const isScrollLink = link.action.startsWith("#");
+          {quickLinks.map((link, index) => {
+            const isScrollLink = link.action.startsWith("#");
 
-    if (isScrollLink) {
-      return (
-        <button
-          key={link.label}
-          onClick={() => {
-            const targetId = link.action.replace("#", "");
-            const el = document.getElementById(targetId);
-            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-          }}
-          className={`flex items-center gap-2 px-6 py-3 border border-${link.color} text-${link.color} hover:bg-${link.color} hover:text-${link.color}-foreground transition-all duration-300 rounded-lg font-semibold fade-in-up delay-${(index + 1) * 200}`}
-        >
-          {link.icon}
-          {link.label}
-        </button>
-      );
-    }
+            if (isScrollLink) {
+              return (
+                <button
+                  key={link.label}
+                  onClick={() => {
+                    const targetId = link.action.replace("#", "");
+                    const el = document.getElementById(targetId);
+                    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  aria-label={link.label}
+                  className={`flex items-center gap-2 px-6 py-3 border border-${link.color} text-${link.color} hover:bg-${link.color} hover:text-${link.color}-foreground transition-all duration-300 rounded-lg font-semibold fade-in-up delay-${(index + 1) * 200}`}
+                >
+                  {link.icon}
+                  {link.label}
+                </button>
+              );
+            }
 
-    return (
-      <a
-        key={link.label}
-        href={link.action}
-        target={link.action.startsWith("http") ? "_blank" : "_self"}
-        rel="noopener noreferrer"
-        download={link.label.includes("Resume")}
-        className={`flex items-center gap-2 px-6 py-3 border border-${link.color} text-${link.color} hover:bg-${link.color} hover:text-${link.color}-foreground transition-all duration-300 rounded-lg font-semibold fade-in-up delay-${(index + 1) * 200}`}
-      >
-        {link.icon}
-        {link.label}
-      </a>
-    );
-  })}
-</div>
+            return (
+              <a
+                key={link.label}
+                href={link.action}
+                target={link.action.startsWith("http") ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+                download={link.label.includes("Resume")}
+                aria-label={link.label}
+                className={`flex items-center gap-2 px-6 py-3 border border-${link.color} text-${link.color} hover:bg-${link.color} hover:text-${link.color}-foreground transition-all duration-300 rounded-lg font-semibold fade-in-up delay-${(index + 1) * 200}`}
+              >
+                {link.icon}
+                {link.label}
+              </a>
+            );
+          })}
+        </div>
 
 
         {/* Location & Availability */}

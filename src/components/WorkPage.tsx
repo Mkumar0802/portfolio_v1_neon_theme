@@ -137,7 +137,7 @@ const PROJECTS: Project[] = [
     category: "Landing Page",
     tech: ["HTML", "PHP Mailer", "Tailwind CSS", "Responsive Design", "Mobile-First", "Tablet-Optimized"],
     links: {
-      live: "https://landmarklivings.in/",
+      live: "https://relaxed-beijinho-3f35e0.netlify.app/",
       repo: "https://github.com/Mkumar0802/Real-State.git"
     },
     highlights: [
@@ -239,6 +239,23 @@ const PROJECTS: Project[] = [
       "Promotional banner for announcing upcoming events, discounts, or new features",
       "Integrated Google Campaign page for promoting special offers and driving traffic"
     ]
+  },
+  {
+    id: "srrr-institute",
+    title: "SRRR Institute Private Limited",
+    blurb: "A fully responsive educational website for SRRR Institute, featuring PHP mail integration for contact forms and optimized for high speed and performance across all devices.",
+    image: "/projects/srr-ins.png",
+    category: "Landing Page",
+    tech: ["PHP Mailer", "Responsive Design", "Speed Optimization", "HTML", "CSS"],
+    links: {
+      live: "https://srrrinstitute.com/",
+    },
+    highlights: [
+      "Integrated PHP Mailer for reliable email delivery from contact forms.",
+      "Fully responsive design ensuring seamless experience on mobile, tablet, and desktop.",
+      "Significant speed optimizations for faster page load times.",
+      "Modern UI/UX tailored for educational institution requirements."
+    ]
   }
 
 
@@ -292,6 +309,8 @@ const WorkPage = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCat(cat)}
+                aria-label={`Filter by ${cat}`}
+                aria-pressed={activeCat === cat}
                 className={classNames(
                   "px-4 py-2 rounded-lg border text-sm font-semibold transition-all duration-200",
                   activeCat === cat
@@ -309,6 +328,7 @@ const WorkPage = () => {
               value={query}
               onChange={e => setQuery(e.target.value)}
               placeholder="Search by tech, title, or role..."
+              aria-label="Search projects by technology, title, or role"
               className="w-full bg-card border border-primary/20 rounded-lg px-4 py-3 pr-10 outline-none focus:border-primary/60"
             />
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">⌘K</span>
