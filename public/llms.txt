@@ -1,0 +1,27 @@
+# Muthu Kumar K - Senior MERN Stack & Full Stack Developer
+
+> "**Building Scalable, High-Performance Web Applications**"
+
+## About
+Muthu Kumar K is a highly skilled Senior MERN Stack Developer with over 4+ years of experience. He specializes in building robust, scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js) and Laravel. Based in Pudukkottai, Tamil Nadu, India.
+
+## Key Skills
+- **Frontend**: React.js, Redux, TailwindCSS, Bootstrap, JavaScript (ES6+), HTML5, CSS3
+- **Backend**: Node.js, Express.js, Laravel (PHP), REST API Development
+- **Database**: MongoDB, MySQL
+- **Tools**: Git, GitHub, Postman, VS Code, Netlify, Vercel
+- **Cloud/DevOps**: Basic AWS/DigitalOcean experience (implied)
+
+## Experience Highlights
+- **Senior MERN Stack Developer** (Current): Leading development of complex web solutions.
+- **Full Stack Developer**: Delivered multiple projects including e-commerce platforms, portfolio sites, and business management tools.
+
+## Contact Information
+- **Portfolio**: [https://muthukumar-portfolio.netlify.app/](https://muthukumar-portfolio.netlify.app/)
+- **Email**: [Available on Website]
+- **LinkedIn**: [Muthu Kumar K](https://www.linkedin.com/in/muthu-kumar-k-1011453a)
+- **GitHub**: [Mkumar0802](https://github.com/Mkumar0802)
+- **WhatsApp**: +91 95664 20177
+
+## Location
+Pudukkottai, Tamil Nadu, India (10.3797° N, 78.8208° E)

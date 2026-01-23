@@ -3,6 +3,8 @@ import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
+import BlogSection from "@/components/BlogSection";
+import { posts } from "@/data/blogPosts";
 import WorkPage from "@/components/WorkPage";
 // import ProjectsPage from "@/components/ProjectsPage";
 
@@ -15,12 +17,17 @@ const Index = () => {
     "@type": "Person",
     "name": "Muthu Kumar K",
     "url": "https://muthukumar-portfolio.netlify.app/",
-    "jobTitle": "MERN Stack Developer",
+    "image": "https://muthukumar-portfolio.netlify.app/og-image.png",
+    "jobTitle": "Senior MERN Stack Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Self-Employed"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Pudukkottai",
       "addressRegion": "Tamil Nadu",
-      "addressCountry": "India"
+      "addressCountry": "IN"
     },
     "sameAs": [
       "https://github.com/Mkumar0802",
@@ -51,6 +58,34 @@ const Index = () => {
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
+        {posts.map((post) => (
+          <script key={post.id} type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt,
+              "image": post.image,
+              "author": {
+                "@type": "Person",
+                "name": "Muthu Kumar K"
+              },
+              "publisher": {
+                "@type": "Person",
+                "name": "Muthu Kumar K",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://muthukumar-portfolio.netlify.app/og-image.png"
+                }
+              },
+              "datePublished": post.isoDate,
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://muthukumar-portfolio.netlify.app/${post.link}`
+              }
+            })}
+          </script>
+        ))}
       </Helmet>
       <HeroSection />
       <AboutSection />
@@ -58,6 +93,7 @@ const Index = () => {
       {/* <ProjectsPage /> */}
       <SkillsSection />
       <ExperienceSection />
+      <BlogSection />
       <ContactSection />
     </main>
   );

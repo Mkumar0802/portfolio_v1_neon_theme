@@ -71,6 +71,17 @@ const HeroSection = () => {
             VIEW MY WORK
           </button>
 
+          {/* Read Blog (scrolls to BlogSection) */}
+          <button
+            className="px-6 py-3 font-semibold border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-[0_0_20px_rgba(14,165,233,0.5)]"
+            onClick={() => {
+              const el = document.getElementById("blog");
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
+            READ BLOG
+          </button>
+
           {/* Get in Touch (WhatsApp) */}
           <a
             href="https://wa.me/919566420177"
@@ -82,19 +93,19 @@ const HeroSection = () => {
           </a>
         </div>
 
-                
-           {/* Download Resume button (below the CTA group) */}
-          <div className="mt-6 flex justify-center fade-in-up delay-900">
-            <a
-              href="https://drive.google.com/file/d/18jXNIXE3x18QsQ0JlIj_pBChuednWDOD/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-accent neon-text-green hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-lg font-semibold flex items-center gap-2"
-            >
-              <FaDownload size={18} />
-              Download Resume
-            </a>
-          </div>
+
+        {/* Download Resume button (below the CTA group) */}
+        <div className="mt-6 flex justify-center fade-in-up delay-900">
+          <a
+            href="https://drive.google.com/file/d/18jXNIXE3x18QsQ0JlIj_pBChuednWDOD/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 border border-accent neon-text-green hover:bg-accent hover:text-accent-foreground transition-all duration-300 rounded-lg font-semibold flex items-center gap-2"
+          >
+            <FaDownload size={18} />
+            Download Resume
+          </a>
+        </div>
 
 
 
