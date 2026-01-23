@@ -13,6 +13,7 @@ import AnalyticsListener from "./components/AnalyticsListener";
 
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ const App = () => (
         </BrowserRouter>
       </TooltipProvider>
       <Analytics />
+      <SpeedInsights />
     </QueryClientProvider>
   </HelmetProvider>
 );
